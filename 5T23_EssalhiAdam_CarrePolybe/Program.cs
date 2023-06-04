@@ -43,7 +43,7 @@ namespace testPourArabeN3
                 Console.WriteLine("=========================");
                 Console.ResetColor();
 
-                Console.ForegroundColor = ConsoleColor.Green;
+                Console.ForegroundColor = ConsoleColor.Blue;
                 Console.WriteLine("    1. Crypter");
                 Console.ResetColor();
                 Console.ForegroundColor = ConsoleColor.DarkCyan;

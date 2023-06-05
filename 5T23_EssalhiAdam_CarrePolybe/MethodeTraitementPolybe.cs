@@ -6,6 +6,14 @@ namespace _5T23_EssalhiAdam_CarrePolybe
 {
     public struct MethodeTraitementMat
     {
+        /**
+        * Cryptage : crée une matrice de chiffrement pour une phrase donnée
+        * IN phrase : phrase à crypter
+        * IN matricesDeBase : matrice de base utilisée pour le cryptage
+        * OUT chiffre : tableau de chiffres résultant du cryptage
+        * HYPO : phrase et matricesDeBase sont non vides
+                 phrase > 0
+        */
         public void Cryptage(string phrase, out string[,] chiffre, string[,] matricesDeBase)
         {
             chiffre = new string[phrase.Length, 2];
@@ -29,6 +37,15 @@ namespace _5T23_EssalhiAdam_CarrePolybe
                 }
             }
         }
+        /**
+        * DeCryptage : déchiffre une matrice de chiffrement pour obtenir la phrase qui correspond
+        * IN phrase :  phrase à décrypter
+        * IN matricesDeBase : matrice de base utiliisée pour le décryptage
+        * IN chiffre :  tableau contenant les chiffres à décrypter
+        * OUT codeDechiffrer : phrase déchiffrée résultante
+        * HYPO : matricesDeBase et chiffre sont non vides
+                 chiffres > 0
+        */
         public void DeCryptage(string phrase, out string codeDechiffrer, string[,] matricesDeBase, string[,] chiffre)
         {
             codeDechiffrer = "";
@@ -48,6 +65,12 @@ namespace _5T23_EssalhiAdam_CarrePolybe
                 }
             }
         }
+        /**
+        * RetireEspaces : crée une chaine de caractères sans espace
+        * IN chaine : chaine de caractères dans laquelle on retire les espaces
+        * OUT copie conforme de la chaine de départ sans les espaces
+        * HYPO : chaine non vide
+        */
         public string RetireEspaces(string chaine)
         {
             string newChaine = "";
@@ -63,6 +86,13 @@ namespace _5T23_EssalhiAdam_CarrePolybe
             }
             return newChaine;
         }
+        /**
+        * CreationMatrice : crée une matrice de base à partir d'un code donné
+        * IN code : code (ou mot clé) utilisé pour remplir la matrice de base
+        * OUT matricesDeBase : matrice de base résultante (avec le code donné)
+        * HYPO : code est non vide
+                 code <= 25
+        */
         public void CreationMatrice(string code, out string[,] matricesDeBase)
         {
             int ligne = 1;
@@ -136,6 +166,12 @@ namespace _5T23_EssalhiAdam_CarrePolybe
             }
 
         }
+
+        /// <summary>
+        /// Savoir si l’entrée de l’utilisateur est bonne.
+        /// </summary>
+        /// <param name="entree">Entrée de l’utilisateur</param>
+        /// <returns>Si l’entrée est bonne ou non</returns>
         public bool EntreeEstBonne(string entree)
         {
             for (int i = 0; i <= entree.Length - 1; i++) // i = Variable qui s’incrémente dans une boucle for (place dans le string)
@@ -145,6 +181,12 @@ namespace _5T23_EssalhiAdam_CarrePolybe
             }
             return true;
         }
+
+        /// <summary>
+        /// vérification et empêche l'utilisateur d'entrer une valeur string.
+        /// </summary>
+        /// <param name="question">demande à adresser à l'utilisateur</param>
+        /// <param name="n">nombre entier récupéré</param>
         public void LireReel(out double n)
         {
             string nUser;
@@ -160,5 +202,6 @@ namespace _5T23_EssalhiAdam_CarrePolybe
                 nUser = RetireEspaces(nUser);
             }
         }
+
     }
 }

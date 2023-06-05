@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Carrefour\\Desktop\\Adam\\5T23_EssalhiAdam_CarrePolybe\\Le-carre-de-Polybe\\5T23_EssalhiAdam_CarrePolybe\\5T23_EssalhiAdam_CarrePolybe.csproj": {}
+    "C:\\Users\\Carrefour\\Desktop\\5T23_EssalhiAdam_CarrePolybe\\Le-carre-de-Polybe\\5T23_EssalhiAdam_CarrePolybe\\5T23_EssalhiAdam_CarrePolybe.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Carrefour\\Desktop\\Adam\\5T23_EssalhiAdam_CarrePolybe\\Le-carre-de-Polybe\\5T23_EssalhiAdam_CarrePolybe\\5T23_EssalhiAdam_CarrePolybe.csproj": {
+    "C:\\Users\\Carrefour\\Desktop\\5T23_EssalhiAdam_CarrePolybe\\Le-carre-de-Polybe\\5T23_EssalhiAdam_CarrePolybe\\5T23_EssalhiAdam_CarrePolybe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Carrefour\\Desktop\\Adam\\5T23_EssalhiAdam_CarrePolybe\\Le-carre-de-Polybe\\5T23_EssalhiAdam_CarrePolybe\\5T23_EssalhiAdam_CarrePolybe.csproj",
+        "projectUniqueName": "C:\\Users\\Carrefour\\Desktop\\5T23_EssalhiAdam_CarrePolybe\\Le-carre-de-Polybe\\5T23_EssalhiAdam_CarrePolybe\\5T23_EssalhiAdam_CarrePolybe.csproj",
         "projectName": "5T23_EssalhiAdam_CarrePolybe",
-        "projectPath": "C:\\Users\\Carrefour\\Desktop\\Adam\\5T23_EssalhiAdam_CarrePolybe\\Le-carre-de-Polybe\\5T23_EssalhiAdam_CarrePolybe\\5T23_EssalhiAdam_CarrePolybe.csproj",
+        "projectPath": "C:\\Users\\Carrefour\\Desktop\\5T23_EssalhiAdam_CarrePolybe\\Le-carre-de-Polybe\\5T23_EssalhiAdam_CarrePolybe\\5T23_EssalhiAdam_CarrePolybe.csproj",
         "packagesPath": "C:\\Users\\Carrefour\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Carrefour\\Desktop\\Adam\\5T23_EssalhiAdam_CarrePolybe\\Le-carre-de-Polybe\\5T23_EssalhiAdam_CarrePolybe\\obj\\",
+        "outputPath": "C:\\Users\\Carrefour\\Desktop\\5T23_EssalhiAdam_CarrePolybe\\Le-carre-de-Polybe\\5T23_EssalhiAdam_CarrePolybe\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Carrefour\\AppData\\Roaming\\NuGet\\NuGet.Config",

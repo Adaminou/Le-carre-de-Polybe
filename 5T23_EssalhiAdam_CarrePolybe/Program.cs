@@ -1,7 +1,7 @@
 ﻿using _5T23_EssalhiAdam_CarrePolybe;
 using System;
 
-namespace testPourArabeN3
+namespace _5T23_EssalhiAdam_CarrePolybe
 {
     class Program
     {
@@ -15,34 +15,38 @@ namespace testPourArabeN3
             string entreeUser;
             string code = "";
             string chiffres;
-            int n;
             int compteurL = 0;
             int compteurC = 0;
             int compteurTest = 0;
             bool recom = true;
+            bool validChiffres = true;
 
             MethodeTraitementMat MesOutils = new MethodeTraitementMat();
 
             while (recom)
             {
                 compteurL = 0;
+
+                // Affichage du titre du programme
                 Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.WriteLine("LE CARRE DE POLYBE");
                 Console.ResetColor();
                 Console.ForegroundColor = ConsoleColor.Blue;
                 Console.WriteLine("=========================");
                 Console.ResetColor();
+
+                // Création de la matrice de base
                 MesOutils.CreationMatrice(code, out matricesDeBase);
+
                 Console.ForegroundColor = ConsoleColor.Blue;
                 Console.WriteLine("=========================");
                 Console.ResetColor();
 
-           
+                // Choix de cryptage ou décryptage
                 Console.WriteLine("Voulez-vous crypter ou décrypter un message ? : ");
                 Console.ForegroundColor = ConsoleColor.DarkCyan;
                 Console.WriteLine("=========================");
                 Console.ResetColor();
-
                 Console.ForegroundColor = ConsoleColor.Blue;
                 Console.WriteLine("    1. Crypter");
                 Console.ResetColor();
@@ -62,10 +66,11 @@ namespace testPourArabeN3
                 Console.WriteLine("=========================");
                 Console.ResetColor();
 
-
                 choix = Console.ReadLine();
+
                 if (choix == "1")
                 {
+                    // Cryptage d'une phrase
                     Console.WriteLine("Quelle phrase voulez-vous crypter ?");
                     phrase = Console.ReadLine();
                     phrase = phrase.ToUpper();
@@ -73,10 +78,22 @@ namespace testPourArabeN3
                     code = Console.ReadLine();
                     code = MesOutils.RetireEspaces(code);
                     code = code.ToUpper();
+
+                    Console.ForegroundColor = ConsoleColor.DarkCyan;
+                    Console.WriteLine("=========================");
+                    Console.ResetColor();
+
+                    // Recréation de la matrice de base avec le nouveau code
                     MesOutils.CreationMatrice(code, out matricesDeBase);
+
+                    // Cryptage de la phrase
                     MesOutils.Cryptage(phrase, out chiffre, matricesDeBase);
 
-                   
+                    Console.ForegroundColor = ConsoleColor.DarkCyan;
+                    Console.WriteLine("=========================");
+                    Console.ResetColor();
+
+                    // Affichage du résultat du cryptage
                     Console.Write("Cryptage : ");
                     Console.ForegroundColor = ConsoleColor.Green;
                     for (int i = 0; i < phrase.Length; i++)
@@ -89,15 +106,19 @@ namespace testPourArabeN3
                     }
                     Console.WriteLine();
                     Console.ResetColor();
+
+                    Console.ForegroundColor = ConsoleColor.DarkCyan;
+                    Console.WriteLine("=========================");
+                    Console.ResetColor();
                 }
 
                 if (choix == "2")
                 {
+                    // Décryptage de chiffres
                     Console.WriteLine("Quels chiffres voulez-vous décrypter ?");
                     MesOutils.LireReel(out double chiffreDecryption);
                     chiffres = chiffreDecryption.ToString();
                     chiffres = MesOutils.RetireEspaces(chiffres);
-                    bool validChiffres = true;
 
                     foreach (char item in chiffres)
                     {
@@ -124,14 +145,21 @@ namespace testPourArabeN3
                         chiffre = new string[chiffres.Length / 2, 2];
                         Console.WriteLine("Quel est votre code ?");
                         code = Console.ReadLine();
+                        code = MesOutils.RetireEspaces(code);
                         code = code.ToUpper();
+
                         Console.ForegroundColor = ConsoleColor.DarkCyan;
                         Console.WriteLine("=========================");
                         Console.ResetColor();
+
+                        // Recréation de la matrice de base avec le nouveau code
                         MesOutils.CreationMatrice(code, out matricesDeBase);
+
                         Console.ForegroundColor = ConsoleColor.DarkCyan;
                         Console.WriteLine("=========================");
                         Console.ResetColor();
+
+                        // Décryptage des chiffres
                         foreach (char seulChiffre in chiffres)
                         {
                             compteurTest++;
@@ -146,7 +174,8 @@ namespace testPourArabeN3
                                 compteurL++;
                             }
                         }
-                        Console.WriteLine("Vos chiffres : " );
+
+                        Console.WriteLine("Vos chiffres : ");
                         Console.ForegroundColor = ConsoleColor.Blue;
                         for (int i = 0; i < chiffre.GetLength(0); i++)
                         {
@@ -162,7 +191,9 @@ namespace testPourArabeN3
                         Console.WriteLine("=========================");
                         Console.ResetColor();
 
+                        // Décryptage du message
                         MesOutils.DeCryptage(phrase, out codeDechiffrer, matricesDeBase, chiffre);
+
                         Console.WriteLine("Votre phrase décryptée : ");
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine(codeDechiffrer);
@@ -172,12 +203,13 @@ namespace testPourArabeN3
                         Console.ResetColor();
                     }
                 }
+
                 if (choix == "3")
                 {
                     break;
                 }
 
-                    Console.WriteLine("Voulez vous faire un autre cryptage ? (oui = o / non = autre)");
+                Console.WriteLine("Voulez vous retourner au menu ? (oui = o / non = autre)");
                 entreeUser = Console.ReadLine();
                 if (entreeUser != "o")
                 {
@@ -188,3 +220,5 @@ namespace testPourArabeN3
         }
     }
 }
+
+// Excusez-moi du retard... J'espère néanmoins que le code plait.
